@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Brew Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bean & Brew Cafe</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#location">Location & Hours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Daily Dose of Delight</h2>
+            <p>Experience the perfect blend of cozy ambiance and exquisite flavors.</p>
+            <a href="#menu" class="btn">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="container section-padding">
+        <h2>About Us</h2>
+        <p>Welcome to Bean & Brew Cafe, where every cup tells a story. Nestled in the heart of the city, we are passionate about serving ethically sourced coffee, freshly baked pastries, and delicious light bites. Our cozy atmosphere is perfect for catching up with friends, working remotely, or simply enjoying a moment of peace.</p>
+    </section>
+
+    <section id="menu" class="container section-padding">
+        <h2>Our Menu</h2>
+        <div class="menu-category">
+            <h3>Coffee & Espresso</h3>
+            <ul>
+                <li><strong>Espresso</strong> <span>$3.00</span></li>
+                <li><strong>Americano</strong> <span>$3.50</span></li>
+                <li><strong>Latte</strong> <span>$4.50</span></li>
+                <li><strong>Cappuccino</strong> <span>$4.50</span></li>
+                <li><strong>Mocha</strong> <span>$5.00</span></li>
+                <li><strong>Cold Brew</strong> <span>$4.75</span></li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h3>Teas & Other Drinks</h3>
+            <ul>
+                <li><strong>Assorted Teas</strong> <span>$3.00</span></li>
+                <li><strong>Chai Latte</strong> <span>$4.50</span></li>
+                <li><strong>Hot Chocolate</strong> <span>$4.00</span></li>
+                <li><strong>Fresh Orange Juice</strong> <span>$4.00</span></li>
+            </ul>
+        </div>
+        <div class="menu-category">
+            <h3>Pastries & Snacks</h3>
+            <ul>
+                <li><strong>Croissant</strong> <span>$3.50</span></li>
+                <li><strong>Blueberry Muffin</strong> <span>$3.75</span></li>
+                <li><strong>Chocolate Chip Cookie</strong> <span>$3.00</span></li>
+                <li><strong>Avocado Toast</strong> <span>$7.00</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="container section-padding">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/400x300/a39d89/ffffff?text=Coffee+Latte" alt="Coffee Latte">
+            <img src="https://via.placeholder.com/400x300/a39d89/ffffff?text=Cozy+Interior" alt="Cozy Interior">
+            <img src="https://via.placeholder.com/400x300/a39d89/ffffff?text=Fresh+Pastries" alt="Fresh Pastries">
+            <img src="https://via.placeholder.com/400x300/a39d89/ffffff?text=Outdoor+Seating" alt="Outdoor Seating">
+        </div>
+    </section>
+
+    <section id="location" class="container section-padding">
+        <h2>Location & Hours</h2>
+        <div class="location-details">
+            <p><strong>Address:</strong> 123 Coffee Lane, Brewton, CA 90210</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Email:</strong> info@beanandbrew.com</p>
+            <h3>Opening Hours:</h3>
+            <ul>
+                <li><strong>Monday - Friday:</strong> 7:00 AM - 6:00 PM</li>
+                <li><strong>Saturday:</strong> 8:00 AM - 5:00 PM</li>
+                <li><strong>Sunday:</strong> 8:00 AM - 4:00 PM</li>
+            </ul>
+            <div class="map-placeholder">
+                <!-- Replace with actual Google Maps embed iframe -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.056764510079!2d-122.41941558468173!3d37.77492947975939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858087961203b5%3A0x1d2e1f2b3c4d5e6f!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container section-padding">
+        <h2>Contact Us</h2>
+        <p>Have questions or special requests? Fill out the form below or reach us directly!</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Bean & Brew Cafe. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="https://via.placeholder.com/24/333/fff?text=FB" alt="Facebook"></a>
+                <a href="#"><img src="https://via.placeholder.com/24/333/fff?text=IG" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" title="Go to top">&#9650;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
