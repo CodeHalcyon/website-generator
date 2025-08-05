@@ -33,20 +33,15 @@ Return only the dictionary. No explanations, no comments. Do NOT wrap the code i
     input_variables=["desc"],
     partial_variables={"format_instructions": parser.get_format_instructions()}
 )
-
-# 4. Set up model
 model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
-
-# 5. Create full chain
 chain = prompt | model | parser
+desc = input("Enter your site's desscription: ")
 
-# 6. Use the chain
+print("Chanting my mantras to make a site for you ✨")
+
 response = chain.invoke({
-    "desc": "A static cafe website that showcases a cafe’s essential information such as the menu, location, opening hours, contact details, and photos."
+    "desc": desc
 })
-
-# 7. Use the parsed result
-print(type(response))  # <class '__main__.WebsiteFiles'>
 
 with open("index.html","w") as f:
     f.write(response.index_html)
