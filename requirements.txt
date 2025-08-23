@@ -2,3 +2,6 @@ python-dotenv
 pydantic
 langchain-core
 langchain-google-genai
+langchain-huggingface
+langchain
+grandalf
