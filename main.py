@@ -194,7 +194,7 @@ model = ChatGoogleGenerativeAI(
     temperature=0.3 
 )
 
-# 5. Function to extract and clean JSON from response
+#extract and clean JSON from response
 def extract_json_from_response(response_text):
     """Extract JSON from model response, handling various formatting issues"""
     # Remove any leading/trailing whitespace
@@ -223,7 +223,6 @@ def extract_json_from_response(response_text):
     
     raise ValueError("Could not extract valid JSON from response")
 
-# 6. Ask for website description
 chat_history = []
 while True:
     desc = input("\nUser: ")
@@ -231,13 +230,11 @@ while True:
     chat_history.append(desc)
     print("✨ Generating your website... please wait...\n")
 
-    # 7. Invoke the chain with error handling
     try:
         # Get raw response first
         chain = prompt | model
         raw_response = chain.invoke({"desc": chat_history})
         # chain.get_graph().draw_ascii()
-        # Extract content from AIMessage if needed
         if hasattr(raw_response, 'content'):
             response_text = raw_response.content
         else:
@@ -245,10 +242,8 @@ while True:
         
         # print("Raw response preview:", response_text[:200] + "..." if len(response_text) > 200 else response_text)
         
-        # Extract and parse JSON
         parsed_data = extract_json_from_response(response_text)
         
-        # Create Pydantic object
         response = WebsiteFiles(**parsed_data)
         
     except Exception as e:
@@ -259,7 +254,6 @@ while True:
             print(raw_response.content if hasattr(raw_response, 'content') else raw_response)
         exit(1)
 
-    # 8. Write files safely
     try:
         Path("index.html").write_text(response.index_html, encoding="utf-8")
         Path("styles.css").write_text(response.styles_css, encoding="utf-8")
@@ -271,7 +265,6 @@ while True:
         print("AI: ", end=" ")
         for question in response.follow_up:
             print(question, end=" ")
-        # Optional: Open index.html in browser
         webbrowser.open("index.html")
         
     except Exception as e:
