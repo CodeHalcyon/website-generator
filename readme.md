@@ -14,7 +14,7 @@ An intelligent website generator that creates premium, responsive websites using
 
 ## 🛠️ Tech Stack
 
-- **AI Model**: Google Gemini 2.5 Flash
+- **AI Model**: GPT oss (or) Google Gemini 2.5 Flash
 - **Framework**: LangChain with Pydantic validation
 - **Frontend**: HTML5, TailwindCSS, GSAP
 - **Languages**: Python 3.8+
